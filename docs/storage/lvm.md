@@ -1,6 +1,6 @@
-# Rocky Linux 10.1: LVM Commands and Troubleshooting
+# RHEL 10.1: LVM Commands and Troubleshooting
 
-This SOP covers common LVM administration on Rocky Linux 10.1. Run storage-changing commands as `root` or with `sudo`. Replace example device names, volume-group names, logical-volume names, and sizes with values verified on the target host.
+This SOP covers common LVM administration on Rocky Linux 10.1. & RHEL 10.1 Run storage-changing commands as `root` or with `sudo`. Replace example device names, volume-group names, logical-volume names, and sizes with values verified on the target host.
 
 > **Caution:** LVM and filesystem commands can destroy data. Confirm the target device with `lsblk`, `pvs`, `vgs`, and `lvs` before making changes. Back up important data and test procedures before using them in production. Never run `pvcreate`, `mkfs`, or a partitioning command on a device that may contain needed data.
 
