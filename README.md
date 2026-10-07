@@ -28,11 +28,11 @@ The goal of this repository is provide practical and automated solutions
 Procedures and reference material related to local storage management.
 
 * [LVM](docs/storage/lvm.md)
-* [Partitions](docs/storage/partitions.md)
-* [Filesystems](docs/storage/filesystems.md)
-* [Mounts and `/etc/fstab`](docs/storage/mounts.md)
-* [XFS](docs/storage/xfs.md)
-* [Storage troubleshooting](docs/storage/troubleshooting.md)
+* [Partitions](docs/storage/lvm.md)
+* [Filesystems](docs/storage/lvm.md)
+* [Mounts and `/etc/fstab`](docs/storage/lvm.md)
+* [XFS](docs/storage/lvm.md)
+* [Storage troubleshooting](docs/storage/lvm.md)
 
 ---
 
@@ -40,12 +40,12 @@ Procedures and reference material related to local storage management.
 
 Service management and system initialization.
 
-* [Systemd basics](docs/systemd/overview.md)
+* [Systemd basics](docs/systemd/services.md)
 * [Managing services](docs/systemd/services.md)
 * [Targets](docs/systemd/targets.md)
-* [Journalctl](docs/systemd/journalctl.md)
-* [Timers](docs/systemd/timers.md)
-* [Troubleshooting services](docs/systemd/troubleshooting.md)
+* [Journalctl](docs/systemd/services.md)
+* [Timers](docs/systemd/services.md)
+* [Troubleshooting services](docs/systemd/services.md)
 
 ---
 
@@ -65,11 +65,11 @@ Security administration and troubleshooting.
 
 Host-based firewall configuration and troubleshooting.
 
-* [Zones](docs/security/firewalld/zones.md)
-* [Services](docs/security/firewalld/services.md)
-* [Ports](docs/security/firewalld/ports.md)
-* [Rich rules](docs/security/firewalld/rich-rules.md)
-* [Troubleshooting](docs/security/firewalld/troubleshooting.md)
+* [Zones](docs/security/firewalld/firewalld.md)
+* [Services](docs/security/firewalld/firewalld.md)
+* [Ports](docs/security/firewalld/firewalld.md)
+* [Rich rules](docs/security/firewalld/firewalld.md)
+* [Troubleshooting](docs/security/firewalld/firewalld.md)
 
 ---
 
@@ -77,12 +77,12 @@ Host-based firewall configuration and troubleshooting.
 
 Network configuration and diagnostics.
 
-* [NetworkManager](docs/networking/networkmanager.md)
-* [nmcli](docs/networking/nmcli.md)
-* [Static IP configuration](docs/networking/static-ip.md)
-* [DNS](docs/networking/dns.md)
-* [Routing](docs/networking/routing.md)
-* [Network troubleshooting](docs/networking/troubleshooting.md)
+* [NetworkManager](docs/networking/networking.md)
+* [nmcli](docs/networking/networking.md)
+* [Static IP configuration](docs/networking/networking.md)
+* [DNS](docs/networking/networking.md)
+* [Routing](docs/networking/networking.md)
+* [Network troubleshooting](docs/networking/networking.md)
 
 ---
 
@@ -90,11 +90,11 @@ Network configuration and diagnostics.
 
 User, group and access management.
 
-* [User management](docs/users/users.md)
-* [Groups](docs/users/groups.md)
-* [sudo](docs/users/sudo.md)
-* [File permissions](docs/users/permissions.md)
-* [ACLs](docs/users/acls.md)
+* [User management](docs/users/users-permissions.md)
+* [Groups](docs/users/users-permissions.md)
+* [sudo](docs/users/users-permissions.md)
+* [File permissions](docs/users/users-permissions.md)
+* [ACLs](docs/users/users-permissions.md)
 
 ---
 
@@ -102,11 +102,12 @@ User, group and access management.
 
 Package management for Rocky Linux and RHEL-based systems.
 
-* [DNF](docs/software/dnf.md)
-* [Package queries](docs/software/package-queries.md)
-* [Package installation and removal](docs/software/packages.md)
-* [Package history](docs/software/history.md)
-* [GPG keys](docs/software/gpg.md)
+* [DNF](docs/software/dnf-flatpak.md)
+* [Package queries](docs/software/dnf-flatpakmd)
+* [Package installation and removal](docs/software/dnf-flatpak.md)
+* [Package history](docs/software/dnf-flatpak.md)
+* [GPG keys](docs/software/dnf-flatpak.md)
+* [Flatpak](docs/software/dnf-flatpak.md)
 
 ---
 
@@ -114,10 +115,10 @@ Package management for Rocky Linux and RHEL-based systems.
 
 Repository configuration and management.
 
-* [Repository configuration](docs/repositories/configuration.md)
-* [Creating a local repository](docs/repositories/local-repository.md)
-* [Repository troubleshooting](docs/repositories/troubleshooting.md)
-* [Offline systems](docs/repositories/offline-systems.md)
+* [Repository configuration](docs/repositories/repositories.md)
+* [Add http or file repository](docs/repositories/repositories.md)
+* [Repository troubleshooting](docs/repositories/repositories.md)
+* [Offline systems](docs/repositories/repositories.md)
 
 ---
 
@@ -125,10 +126,10 @@ Repository configuration and management.
 
 Network File System administration.
 
-* [NFS server](docs/services/nfs/server.md)
-* [NFS client](docs/services/nfs/client.md)
-* [Exports](docs/services/nfs/exports.md)
-* [NFS troubleshooting](docs/services/nfs/troubleshooting.md)
+* [NFS server](docs/services/nfs/nfs.md)
+* [NFS client](docs/services/nfs/nfs.md)
+* [Exports](docs/services/nfs/nfs.md)
+* [NFS troubleshooting](docs/services/nfs/nfs.md)
 
 ---
 
@@ -145,17 +146,8 @@ SMB/CIFS file sharing.
 
 ## Bash
 
-Shell scripting and automation concepts.
-
-* [Bash fundamentals](docs/bash/fundamentals.md)
-* [Variables](docs/bash/variables.md)
-* [Conditionals](docs/bash/conditionals.md)
-* [Loops](docs/bash/loops.md)
-* [Functions](docs/bash/functions.md)
-* [Exit codes](docs/bash/exit-codes.md)
-* [Input validation](docs/bash/input-validation.md)
-
-> Automation scripts are maintained separately in a private repository.
+Shell scripting and automation.
+> Scripts are maintained in a private repository.
 
 ---
 
@@ -247,3 +239,6 @@ Always validate procedures in a non-production environment before applying them 
 Commands that modify storage, networking, security policies, boot configuration or system services should be reviewed carefully before execution.
 
 ---
+
+
+[def]: docs/systemd/services.md
